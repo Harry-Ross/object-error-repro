@@ -1,4 +1,5 @@
 import { defineConfig, defineSchema } from "tinacms";
+import { testComponentSchema } from "../components/TestComponent";
 
 const schema = defineSchema({
   collections: [
@@ -13,6 +14,7 @@ const schema = defineSchema({
           label: "Main Content",
           type: "rich-text",
           isBody: true,
+          templates: [testComponentSchema]
         },
       ],
       ui: {
